@@ -1,19 +1,32 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
-const HomeView = () => {
+const HomeView = ({ navigation }) => {
+  console.log(navigation)
   return (
-    <View>
-      <Text style={style.texto}> TELA HOME </Text>
+    <View style={styles.mainView}>
+      <Text style={styles.texto}> TELA HOME </Text>
+      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('TelaLogin')}>
+        <Text>Tela Login</Text>
+      </TouchableOpacity>
     </View>
   )
 }
 
-const style = StyleSheet.create({
-  texto: {
-    flex: 1,
-    fontSize: 28,
+const styles = StyleSheet.create({
+  mainView: {
     alignSelf: "center",
+  },
+  btn: {
+    backgroundColor: "#ddff00",
+    alignItems: "center",
+    color: "white",
+    marginTop: 40,
+    paddingVertical: 20,
+  },
+  texto: {
+    // flex: 0,
+    fontSize: 28,
   }
 })
 
