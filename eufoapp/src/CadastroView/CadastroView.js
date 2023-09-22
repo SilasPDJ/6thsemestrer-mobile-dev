@@ -11,7 +11,6 @@ const CadastroView = () => {
 
 const style = StyleSheet.create({
   texto: {
-    flex: 1,
     fontSize: 28,
     alignSelf: "center",
   }
